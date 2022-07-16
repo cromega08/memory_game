@@ -1,0 +1,81 @@
+:root {
+    --main: #04009A;
+    --second: #77ACF1;
+    --third: #3EDBF0;
+    --contrast: #C0FEFC;
+}
+
+body {
+    overflow: hidden;
+    min-width: 99vw;
+    min-height: 99vh;
+    background-color: var(--main);
+    color: var(--contrast);
+    display: grid;
+    place-items: center;
+}
+
+h1 {
+    width: 50vw;
+    border-radius: 1em;
+    background-color: var(--third);
+    text-align: center;
+    font-size: 3.5em;
+    padding: .25em;
+    margin-bottom: -1.5em;
+}
+
+button {
+    aspect-ratio: 1/1;
+    width: 20vw;
+    border-radius: 1em;
+    border: none;
+    background-color: var(--second);
+    color: var(--contrast);
+    font-size: 2.5em;
+    margin: 1em;
+}
+
+button:hover {
+    transition-property: border;
+    transition-duration: 300ms;
+    border: solid;
+    border-width: .25em;
+    border-color: var(--contrast);
+}
+
+img {
+    width: 18vw;
+    background-color: var(--second);
+    border-radius: 1em;
+    padding: 1em;
+    margin: .5vw;
+}
+
+footer {
+    border-radius: 1em;
+    background-color: var(--second);
+    font-size: 1.1em;
+    padding: 1vw;
+    color: var(--main);
+}
+
+
+.guessed {
+    width: 16.55vw;
+    border: solid;
+    border-color: var(--third);
+    border-width: .75vw;
+    pointer-events: none;
+}
+
+.win {
+    color: var(--main);
+    border: solid;
+    border-radius: 1em;
+    border-color: var(--third);
+    border-width: .25em;
+    background-color: var(--contrast);
+    font-size: 4em;
+    padding: .5em 1em;
+}
