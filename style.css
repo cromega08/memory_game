@@ -66,6 +66,11 @@ footer {
     color: var(--main);
 }
 
+a,
+a:visited {
+    color: var(--contrast);
+    text-decoration: none;
+}
 
 .guessed {
     width: 16.55vw;
