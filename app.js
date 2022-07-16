@@ -37,7 +37,7 @@ function create_board(amount = Number, array_normal = Array, array_random = Arra
     for (let index = 0; index < array_random.length; ++index) {
 
         const card = document.createElement("img")
-        card.setAttribute("src", "/imgs/game_images/wave.png")
+        card.setAttribute("src", "/imgs/wave.png")
         card.setAttribute("alt", "wave.png")
         card.setAttribute("data-id", index)
         card.addEventListener("click", flip)
@@ -107,7 +107,7 @@ function backflip(array = Array) {
 
         if (element === undefined) return;
 
-        element.setAttribute("src", "/imgs/game_images/wave.png")
+        element.setAttribute("src", "/imgs/wave.png")
         element.setAttribute("alt", "wave.png")
     });
 }
