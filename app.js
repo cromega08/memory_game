@@ -18,7 +18,7 @@ const imgs = [
     content = document.querySelector("main"),
     header = document.querySelector("h1")
 
-let chosed = [], chosed_id = [], cards = [], points = 0, random_imgs = []
+let chosed = [], chosed_id = [], cards = [], random_imgs = []
 
 function randomize(amount = Number, array) {
     let new_array = array.sort(() => 0.5 - Math.random()).slice(0, amount/2),
@@ -31,7 +31,7 @@ function create_board(amount = Number, array_normal = Array, array_random = Arra
     let selected = []
 
     array_random = randomize(amount, array_normal)
-    increase_points(header)
+    header.remove()
     container.innerHTML = ""
 
     for (let index = 0; index < array_random.length; ++index) {
@@ -66,8 +66,6 @@ function flip() {
     if (chosed.length > 1) {
         if (chosed[0] === chosed[1]) {
 
-            increase_points(header)
-
             cards[chosed_id[0]].setAttribute("class", "guessed")
             cards[chosed_id[0]].removeEventListener("click", flip)
             cards[chosed_id[0]].setAttribute("src", img_src)
@@ -95,11 +93,6 @@ function flip() {
             setTimeout(backflip, 800, cards)
         }
     }
-}
-
-function increase_points(element = Document) {
-    element.innerHTML = `Points: ${points}`
-    points += 5
 }
 
 function backflip(array = Array) {

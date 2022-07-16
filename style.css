@@ -25,6 +25,12 @@ h1 {
     margin-bottom: -1.5em;
 }
 
+main {
+    display: flex;
+    flex-wrap: wrap;
+    place-content: center;
+}
+
 button {
     aspect-ratio: 1/1;
     width: 20vw;
@@ -45,7 +51,7 @@ button:hover {
 }
 
 img {
-    width: 18vw;
+    max-width: 18vw;
     background-color: var(--second);
     border-radius: 1em;
     padding: 1em;
@@ -78,4 +84,16 @@ footer {
     background-color: var(--contrast);
     font-size: 4em;
     padding: .5em 1em;
+}
+
+@media (orientation: landscape) {
+    img {
+        max-width: 11vw;
+    }
+}
+
+@media (max-height: 600px) {
+    img {
+        max-width: 13vw;
+    }
 }
